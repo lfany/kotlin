@@ -15,6 +15,19 @@ fun main(args: Array<String>) {
     println("${list[1].javaClass} & ${list[2].javaClass}")
 
     println(list.filter { it is Int || it is Float || it is Double || it is String })
+    println(list.filter { x -> x is Data })
+    for (i in list) {
+        println(
+                when (i) {
+                    is Int -> "$i is Int"
+                    is Float -> "$i is Float"
+                    is Double -> "$i is Double"
+                    is String -> "$i is String"
+                    is Data -> "$i is Data"
+                    else -> "$i is Other"
+                }
+        )
+    }
 }
 
 // Unit 返回类型可以省略：

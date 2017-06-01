@@ -44,6 +44,8 @@ fun main(args: Array<String>) {
 
     println("aa".xxx())
     println(p.xxx())
+
+    println(Resource.name)
 }
 
 // Unit 返回类型可以省略：
@@ -64,4 +66,9 @@ val p: String by lazy {
 
 fun String.xxx(str: String = "xxxxxxxxxxxx"): String {
     return str
+}
+
+// 创建单例
+object Resource {
+    val name = "Name"
 }

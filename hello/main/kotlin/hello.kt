@@ -35,12 +35,15 @@ fun main(args: Array<String>) {
 //    for (i in 0..10 step 2){
 //        println(i)
 //    }
-    for (i in 10 downTo 2 step 3){
-        println(i)
-    }
+//    for (i in 10 downTo 2 step 3) {
+//        println(i)
+//    }
 
-    val map = mapOf("a" to 1, "b" to 2, "c" to 3)
-    println(map)
+//    val map = mapOf("a" to 1, "b" to 2, "c" to 3)
+//    println(map)
+
+    println("aa".xxx())
+    println(p.xxx())
 }
 
 // Unit 返回类型可以省略：
@@ -57,4 +60,8 @@ data class Data(val name: String = "xxx", var email: String = "xxx@xxx.com")
 val p: String by lazy {
     // 计算该字符串
     "aa"
+}
+
+fun String.xxx(str: String = "xxxxxxxxxxxx"): String {
+    return str
 }

@@ -1,3 +1,5 @@
+import java.io.File
+
 /**
  * Created by dp on 2017/5/31.
  */
@@ -46,7 +48,37 @@ fun main(args: Array<String>) {
     println(p.xxx())
 
     println(Resource.name)
+
+    val files = File("Test").listFiles()
+
+    println(files?.size)
+
+    println(files?.size ?: "empty")
+    println(arrayOfMinusOnes(11).asList())
+
+    class Turtle {
+        fun penDown() {}
+        fun penUp() {}
+        fun turn(degrees: Double) {}
+        fun forward(pixels: Double) {}
+    }
+
+    val myTurtle = Turtle()
+    with(myTurtle) {
+        // 画一个 100 像素的正方形
+        penDown()
+        for (i in 1..4) {
+            forward(100.0)
+            turn(90.0)
+        }
+        penUp()
+    }
 }
+
+fun arrayOfMinusOnes(size: Int): IntArray {
+    return IntArray(size).apply { fill(-1) }
+}
+
 
 // Unit 返回类型可以省略：
 // 字符串模板
@@ -72,3 +104,5 @@ fun String.xxx(str: String = "xxxxxxxxxxxx"): String {
 object Resource {
     val name = "Name"
 }
+
+

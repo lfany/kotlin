@@ -9,6 +9,12 @@ fun main(args: Array<String>) {
     val data = Data()
     data.email = "xx"
     println(data)
+
+    val list = listOf(1, 1.0f, 1.0, "string", data)
+    println(list)
+    println("${list[1].javaClass} & ${list[2].javaClass}")
+
+    println(list.filter { it is Int || it is Float || it is Double || it is String })
 }
 
 // Unit 返回类型可以省略：

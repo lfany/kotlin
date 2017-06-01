@@ -28,6 +28,16 @@ fun main(args: Array<String>) {
                 }
         )
     }
+
+//    for (i in 0..10){
+//        println(i)
+//    }
+//    for (i in 0..10 step 2){
+//        println(i)
+//    }
+    for (i in 10 downTo 2 step 3){
+        println(i)
+    }
 }
 
 // Unit 返回类型可以省略：

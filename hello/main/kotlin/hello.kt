@@ -5,6 +5,8 @@
 fun main(args: Array<String>) {
     println("Hello!")
     printSum(1, 2)
+
+    println(Data())
 }
 
 // Unit 返回类型可以省略：
@@ -12,4 +14,9 @@ fun main(args: Array<String>) {
 fun printSum(a: Int, b: Int): Unit {
     println("$a + $b = ${a + b}")
 }
+
+
+// https://www.kotlincn.net/docs/reference/idioms.html
+// 创建 DTOs（POJOs/POCOs） 函数的默认参数
+data class Data(val name: String = "xxx", val email: String = "xxx@xxx.com")
 

@@ -38,6 +38,9 @@ fun main(args: Array<String>) {
     for (i in 10 downTo 2 step 3){
         println(i)
     }
+
+    val map = mapOf("a" to 1, "b" to 2, "c" to 3)
+    println(map)
 }
 
 // Unit 返回类型可以省略：
@@ -51,3 +54,7 @@ fun printSum(a: Int, b: Int): Unit {
 // 创建 DTOs（POJOs/POCOs） 函数的默认参数
 data class Data(val name: String = "xxx", var email: String = "xxx@xxx.com")
 
+val p: String by lazy {
+    // 计算该字符串
+    "aa"
+}
